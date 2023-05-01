@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def create
     Post.create(content: params[:content])
-    redirect_to action: index #追記する
+    redirect_to action: :index  # 追記する
+    # redirect_to root_path
   end
 end
